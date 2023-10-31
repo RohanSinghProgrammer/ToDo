@@ -12,6 +12,8 @@ export type todoType = {
 export type todoContext = {
   todos: todoType[];
   addTodo: (task: string) => void;
+  markAsCompleted: (id: string) => void;
+  deleteTodo: (id: string) => void;
 };
 
 export const TodosContext = createContext<todoContext | null>(null);
@@ -21,17 +23,34 @@ export const TodosProvider = ({ children }: { children: ReactNode }) => {
 
   const addTodo = (task: string) => {
     let todo: todoType = {
-      id: Math.floor(Math.random() * 99999999).toString(),
+      id: Math.random().toString(),
       task,
       isCompleted: false,
       createdAt: new Date(),
     };
     setTodos((prev) => [todo, ...prev]);
-    console.log(todos);
+  };
+
+  const markAsCompleted = (id: string) => {
+    setTodos((prev) => {
+      return prev.map((task) => {
+        if (task.id === id) {
+          return { ...task, isCompleted: !task.isCompleted };
+        }
+        return task;
+      });
+    });
+  };
+  
+  const deleteTodo = (id: string) => {
+    let filteredTodos = todos.filter((item) => item.id != id);
+    setTodos(filteredTodos);
   };
 
   return (
-    <TodosContext.Provider value={{ todos, addTodo }}>
+    <TodosContext.Provider
+      value={{ todos, addTodo, markAsCompleted, deleteTodo }}
+    >
       {children}
     </TodosContext.Provider>
   );
