@@ -15,13 +15,13 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-4">
+    <form onSubmit={handleSubmit} className="flex items-center gap-4 w-full">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         type="text"
         placeholder="Add your todo"
-        className="py-2 px-3 focus:outline-none border-2 rounded-md"
+        className="py-2 px-3 focus:outline-none border-2 rounded-md flex-1"
       />
       <button className="px-4 py-2 bg-green-500 text-white rounded-md">
         ADD
