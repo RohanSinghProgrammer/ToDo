@@ -1,12 +1,31 @@
 "use client";
 
 import React from "react";
-import { RiTodoLine } from 'react-icons/ri';
+import { RiTodoLine } from "react-icons/ri";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../../firebase";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const loginWithGoogle = () => {};
+
+  const router = useRouter();
+
+  // Function to signing with google
+  const loginWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user; // GET user details
+        router.push("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log({ errorCode, errorMessage });
+      });
+  };
   const loginWithGithub = () => {};
   const loginWithFacebook = () => {};
+
   return (
     // <!-- component -->
     <div className="relative bg-gradient-to-br from-sky-50 to-gray-200 h-screen grid place-items-center">
@@ -22,7 +41,8 @@ const Login = () => {
               </div>
               <div className="mt-16 grid space-y-4">
                 {/* LOGIN WITH GOOGLE */}
-                <button onClick={loginWithGoogle}
+                <button
+                  onClick={loginWithGoogle}
                   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
      hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >
@@ -39,6 +59,7 @@ const Login = () => {
                 </button>
                 {/* LOGIN WITH GITHUB */}
                 <button
+                  onClick={loginWithGithub}
                   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
      hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >
@@ -58,6 +79,7 @@ const Login = () => {
                 </button>
                 {/* LOGIN WITH FACEBOOK */}
                 <button
+                  onClick={loginWithFacebook}
                   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
                                          hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                 >
