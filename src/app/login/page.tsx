@@ -4,11 +4,8 @@ import React from "react";
 import { RiTodoLine } from "react-icons/ri";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../../firebase";
-import { useRouter } from "next/navigation";
 
 const Login = () => {
-
-  const router = useRouter();
 
   // Function to signing with google
   const loginWithGoogle = async () => {
@@ -18,7 +15,11 @@ const Login = () => {
       throw new Error("an error occurred")
     }
   };
+
+  // Function to signing with github
   const loginWithGithub = () => {};
+
+  // Function to signing with facebook
   const loginWithFacebook = () => {};
   
 
