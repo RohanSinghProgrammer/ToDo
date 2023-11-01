@@ -11,20 +11,16 @@ const Login = () => {
   const router = useRouter();
 
   // Function to signing with google
-  const loginWithGoogle = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const user = result.user; // GET user details
-        router.push("/");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log({ errorCode, errorMessage });
-      });
+  const loginWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, provider)
+    } catch (e) {
+      throw new Error("an error occurred")
+    }
   };
   const loginWithGithub = () => {};
   const loginWithFacebook = () => {};
+  
 
   return (
     // <!-- component -->
