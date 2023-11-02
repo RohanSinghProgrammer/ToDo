@@ -7,7 +7,7 @@ type Params = {
 
 const Navbar = ({ tab }: Params) => {
   return (
-    <nav className="w-full flex justify-between border-b px-0.5">
+    <nav className="w-full flex justify-between border-b px-4 md:px-0.5">
       <Link href={"/"} className={tab ? "text-gray-600" : "border-b-2 border-green-500 font-semibold"}>
         All
       </Link>

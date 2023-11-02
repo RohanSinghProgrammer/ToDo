@@ -15,7 +15,7 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-4 w-full">
+    <form onSubmit={handleSubmit} className="flex items-center gap-4 w-full px-4 md:px-0">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}

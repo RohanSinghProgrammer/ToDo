@@ -17,8 +17,8 @@ const Todos = ({ tab }: Params) => {
     filterTodos = todos.filter((item) => item.isCompleted);
   }
 
-  const done = "line-through text-red-600 flex-1 px-4";
-  const notDone = "text-gray-900 flex-1 px-4";
+  const done = "line-through text-red-600 flex-1 pl-4";
+  const notDone = "text-gray-900 flex-1 pl-4";
 
   return (
     <div className="w-full">
