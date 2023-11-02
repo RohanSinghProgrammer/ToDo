@@ -10,7 +10,7 @@ const Authentication = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname(); // get pathname
   const router = useRouter();
 
-  const onAuthStateChange = (user: object) => {
+  const onAuthStateChange = (user: object | null) => {
       if (user) {
         // User is logged in.
         if (unProtectedRoutesArr.includes(pathname)) router.replace("/");
