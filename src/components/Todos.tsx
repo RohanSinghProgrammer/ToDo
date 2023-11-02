@@ -31,7 +31,7 @@ const Todos = ({ tab }: Params) => {
             type="checkbox"
             id={`todo-${item.id}`}
             checked={item.isCompleted}
-            onChange={() => markAsCompleted(item.id)}
+            onChange={() => markAsCompleted(item.id as string)}
             className="accent-red-500"
           />
           <label
@@ -42,7 +42,7 @@ const Todos = ({ tab }: Params) => {
           </label>
           {item.isCompleted && (
             <button
-              onClick={() => deleteTodo(item.id)}
+              onClick={() => deleteTodo(item.id as string)}
               className="px-4 py-2 bg-red-500 text-white rounded-md"
             >
               DELETE
