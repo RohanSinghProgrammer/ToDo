@@ -35,3 +35,7 @@ Before you begin, ensure you have met the following requirements:
 
    ```bash
    git clone https://github.com/yourusername/your-todo-app.git
+
+2. cd ./workdir
+3. npm install
+4. npm run dev
