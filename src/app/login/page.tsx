@@ -29,10 +29,10 @@ const Login = () => {
   return (
     // <!-- component -->
     <div className="relative bg-gradient-to-br from-sky-50 to-gray-200 h-screen grid place-items-center">
-      <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
-        <div className="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
-          <div className="rounded-xl bg-white shadow-xl">
-            <div className="p-6 sm:p-16">
+      <div className="relative container m-auto text-gray-500 md:px-12 xl:px-40 h-full md:h-fit grid place-items-center">
+        <div className="m-auto w-full md:w-8/12 lg:w-6/12 xl:w-6/12 h-full">
+          <div className="rounded-xl bg-white shadow-xl h-full pt-16 md:pt-0">
+            <div className="p-12">
               <div className="space-y-4 flex items-center justify-center space-x-4">
                 <RiTodoLine className="text-8xl text-blue-500" />
                 <h2 className="mb-8 text-2xl text-cyan-900 font-bold">
