@@ -21,7 +21,7 @@ const AddTodo = () => {
         onChange={(e) => setValue(e.target.value)}
         type="text"
         placeholder="Add your todo"
-        className="py-2 px-3 focus:outline-none border-2 rounded-md flex-1"
+        className="py-2 px-3 focus:outline-none border-2 rounded-md flex-1 w-2.5"
       />
       <button className="px-4 py-2 bg-green-500 text-white rounded-md">
         ADD
