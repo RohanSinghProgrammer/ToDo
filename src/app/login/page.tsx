@@ -20,10 +20,14 @@ const Login = () => {
   };
 
   // Function to signing with github
-  const loginWithGithub = () => {};
+  const loginWithGithub = () => {
+    alert("Coming soon! kindly login with google please 😊")
+  };
 
   // Function to signing with facebook
-  const loginWithFacebook = () => {};
+  const loginWithFacebook = () => {
+    alert("Coming soon! kindly login with google please 😊")
+  };
   
 
   return (
