@@ -64,7 +64,7 @@ export const TodosProvider = ({ children }: { children: ReactNode }) => {
     if (pathname.length == 1) {
       getDataFromFirebase().then((data) => setTodos(data));
     }
-  }, [pathname]);
+  }, [pathname,getDataFromFirebase]);
 
   // add ToDo function
   const addTodo = (task: string) => {
