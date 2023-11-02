@@ -16,7 +16,7 @@ export default function Home() {
         <LogoutButton />
         <div className=" w-full flex items-center space-x-3 justify-between">
           <FcTodoList className="text-2xl" />
-          <h2 className="uppercase md:text-2xl font-semibold">Next.js ToDo App</h2>
+          <h2 className="uppercase text-xl md:text-2xl font-semibold">Next.js ToDo App</h2>
           <FcTodoList className="text-2xl" />
         </div>
         <Navbar tab={activeTab} />

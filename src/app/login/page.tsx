@@ -4,13 +4,16 @@ import React from "react";
 import { RiTodoLine } from "react-icons/ri";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../../firebase";
+import { useTodos } from "@/store/todos";
 
 const Login = () => {
+  const {setId} = useTodos()
 
   // Function to signing with google
   const loginWithGoogle = async () => {
     try {
-      await signInWithPopup(auth, provider)
+      let result = await signInWithPopup(auth, provider)
+      setId(result.user.uid) // set uid to contextual state variable
     } catch (e) {
       throw new Error("an error occurred")
     }
