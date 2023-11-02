@@ -4,11 +4,19 @@ export type todoType = {
     isCompleted: boolean;
     createdAt: Date;
   };
+
+  export type todoDocumentType = {
+    id?: string;
+    task?: string;
+    isCompleted?: boolean;
+    createdAt?: Date;
+  };
   
   export type todoContext = {
     todos: todoType[];
     addTodo: (task: string) => void;
     markAsCompleted: (id: string) => void;
     deleteTodo: (id: string) => void;
-    setId: React.Dispatch<string>
+    setId: React.Dispatch<string>;
+    id: string
   };

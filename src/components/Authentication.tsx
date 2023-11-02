@@ -4,8 +4,7 @@ import { useRouter, usePathname, redirect } from "next/navigation";
 import React from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase";
-
-const unProtectedRoutesArr = ["/login"];
+import { unProtectedRoutesArr } from "@/utils/unprotectedRoutes";
 
 const Authentication = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname(); // get pathname
