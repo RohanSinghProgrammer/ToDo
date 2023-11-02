@@ -1,7 +1,7 @@
 "use client";
 
 import { useTodos } from "@/store/todos";
-import React, { useEffect } from "react";
+import React from "react";
 
 type Params = {
   tab: string | null;
