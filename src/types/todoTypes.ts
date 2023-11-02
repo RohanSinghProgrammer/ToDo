@@ -13,7 +13,7 @@ export type todoType = {
   };
   
   export type todoContext = {
-    todos: todoType[];
+    todos: todoDocumentType[];
     addTodo: (task: string) => void;
     markAsCompleted: (id: string) => void;
     deleteTodo: (id: string) => void;
