@@ -1,6 +1,6 @@
 # Next.js Todo App with Firebase Backend
 
-A simple Todo application built with Next.js, Firebase for the backend, and styled using Tailwind CSS. This project demonstrates how to create a modern web application with a serverless backend, user authentication, and Docker containerization.
+A simple Todo application built with Next.js, Firebase for the backend, and styled using Tailwind CSS. This project demonstrates how to create a modern web application with a serverless backend, user authentication.
 
 
 ## Demo
@@ -12,14 +12,12 @@ A live demo of the application can be found at [Demo Link](https://your-demo-lin
 - User authentication using Firebase Authentication.
 - Create, read, update, and delete (CRUD) functionality for Todos.
 - Responsive design with Tailwind CSS.
-- Docker containerization for easy deployment.
 
 ## Technologies Used
 
 - [Next.js](https://nextjs.org/) - A React framework for building web applications.
 - [Firebase](https://firebase.google.com/) - Google's cloud-based platform for building web and mobile apps.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for quickly building custom designs.
-- [Docker](https://www.docker.com/) - Containerization technology for packaging applications and their dependencies.
 
 ## Prerequisites
 
@@ -34,7 +32,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-todo-app.git
+   git clone https://github.com/RohanSinghProgrammer/ToDo
 
 2. cd ./workdir
 3. npm install
